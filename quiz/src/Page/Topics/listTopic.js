@@ -67,14 +67,14 @@ function ListTopic() {
                 style={customStyles}
                 contentLabel="Example Modal"
             >
-                <div classNameName="modal__content">
-                    <div classNameName="modal__title">Bài tập về chủ đề: {item?.name}</div>
+                <div className="modal__content">
+                    <div className="modal__title">Bài tập về chủ đề: {item?.name}</div>
                     <span>Xác nhận làm bài tập về chủ đề {item?.name} gồm 10 câu hỏi? Xác nhận làm bài.</span>
                     <hr />
                 </div>
-                <div classNameName="modal__button">
-                    <button onClick={closeModal} classNameName="modal__close">Hủy</button>
-                    <button onClick={() => handleClick(item)} classNameName="modal__ok">Làm</button>
+                <div className="modal__button">
+                    <button onClick={closeModal} className="modal__close">Hủy</button>
+                    <button onClick={() => handleClick(item)} className="modal__ok">Làm</button>
                 </div>
             </Modal>
 
