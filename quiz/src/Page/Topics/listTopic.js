@@ -67,42 +67,42 @@ function ListTopic() {
                 style={customStyles}
                 contentLabel="Example Modal"
             >
-                <div className="modal__content">
-                    <div className="modal__title">Bài tập về chủ đề: {item?.name}</div>
+                <div classNameName="modal__content">
+                    <div classNameName="modal__title">Bài tập về chủ đề: {item?.name}</div>
                     <span>Xác nhận làm bài tập về chủ đề {item?.name} gồm 10 câu hỏi? Xác nhận làm bài.</span>
                     <hr />
                 </div>
-                <div className="modal__button">
-                    <button onClick={closeModal} className="modal__close">Hủy</button>
-                    <button onClick={() => handleClick(item)} className="modal__ok">Làm</button>
+                <div classNameName="modal__button">
+                    <button onClick={closeModal} classNameName="modal__close">Hủy</button>
+                    <button onClick={() => handleClick(item)} classNameName="modal__ok">Làm</button>
                 </div>
             </Modal>
 
-            <section class="categories" id="categories" style={{ padding: '20px 0', background: 'white' }}>
-                <div class="categories-container">
-                    <div class="section-header animate-on-scroll">
-                        <h2 class="section-title">Khám phá các chủ đề</h2>
-                        <p class="section-subtitle">Từ công nghệ thông tin đến kinh doanh, chúng tôi có đầy đủ các chủ đề để bạn lựa
+            <section className="categories" id="categories" style={{ padding: '20px 0', background: 'white' }}>
+                <div className="categories-container">
+                    <div className="section-header animate-on-scroll">
+                        <h2 className="section-title">Khám phá các chủ đề</h2>
+                        <p className="section-subtitle">Từ công nghệ thông tin đến kinh doanh, chúng tôi có đầy đủ các chủ đề để bạn lựa
                             chọn.</p>
                     </div>
-                    <div class="categories-grid">
+                    <div className="categories-grid">
                         {topics.length === 0 ? (
                             <p>Đang tải dữ liệu</p>
                         ) : (
                             topics.map(item => (
-                                <div class="category-card animate-on-scroll" key={item.id} onClick={() => openModal(item)}>
-                                    <div class="category-icon">
+                                <div className="category-card animate-on-scroll" key={item.id} onClick={() => openModal(item)}>
+                                    <div className="category-icon">
                                         <img
                                             src={imageMap[item.name]}
                                             alt={item.name}
                                             width="40"
                                         />
                                     </div>
-                                    <h3 class="category-title">
+                                    <h3 className="category-title">
                                         {item.name}
                                     </h3>
-                                    <p class="category-count">10+ câu hỏi</p>
-                                    <p class="category-description">Các câu hỏi liên quan tới {item.name}</p>
+                                    <p className="category-count">10+ câu hỏi</p>
+                                    <p className="category-description">Các câu hỏi liên quan tới {item.name}</p>
                                 </div>
                             ))
                         )}

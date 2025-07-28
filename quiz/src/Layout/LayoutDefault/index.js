@@ -88,15 +88,15 @@ function LayoutDefault() {
           <Outlet />
         </main>
 
-        <footer class="footer">
-          <div class="footer-container">
-            <div class="footer-grid">
-              <div class="footer-section">
+        <footer className="footer">
+          <div className="footer-container">
+            <div className="footer-grid">
+              <div className="footer-section">
                 <h3>QuizMasterVN</h3>
                 <p style={{ color:'d1d5db', marginBottom:'20px' }}>Nền tảng học tập trực tuyến hàng đầu Việt Nam, giúp bạn nâng
                   cao kiến thức một cách hiệu quả.</p>
               </div>
-              <div class="footer-section">
+              <div className="footer-section">
                 <h3>Sản phẩm</h3>
                 <ul>
                   <li><a href="#">Bài thi trắc nghiệm</a></li>
@@ -105,7 +105,7 @@ function LayoutDefault() {
                   <li><a href="#">Ứng dụng mobile</a></li>
                 </ul>
               </div>
-              <div class="footer-section">
+              <div className="footer-section">
                 <h3>Hỗ trợ</h3>
                 <ul>
                   <li><a href="#">Trung tâm trợ giúp</a></li>
@@ -114,7 +114,7 @@ function LayoutDefault() {
                   <li><a href="#">Báo lỗi</a></li>
                 </ul>
               </div>
-              <div class="footer-section">
+              <div className="footer-section">
                 <h3>Công ty</h3>
                 <ul>
                   <li><a href="#">Về chúng tôi</a></li>
@@ -124,7 +124,7 @@ function LayoutDefault() {
                 </ul>
               </div>
             </div>
-            <div class="footer-bottom">
+            <div className="footer-bottom">
               <p>&copy; 2025 QuizMasterVN. Tất cả quyền được bảo lưu. | Điều khoản sử dụng | Chính sách bảo mật</p>
             </div>
           </div>
