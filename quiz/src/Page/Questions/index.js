@@ -118,7 +118,7 @@ function Questions() {
     // console.log(questions);
 
     return (
-        <>
+        <div className="container">
             <div className="quesion">
                 <h2 className="question__title">Danh sách câu hỏi:</h2>
                 {questions.map((item, index) => (
@@ -148,10 +148,10 @@ function Questions() {
                 ))}
             </div>
             {/* <button className="question__submit" onClick={handleSubmit}>Nộp</button> */}
-            <Button type="primary" loading={loading} onClick={handleSubmit}>
+            <Button className="question__submit" type="primary" loading={loading} onClick={handleSubmit}>
                 Nộp bài
             </Button>
-        </>
+        </div>
     )
 }
 
