@@ -9,10 +9,12 @@ import Topics from '../Page/Topics';
 import History from '../Page/History';
 import Result from '../Page/Result';
 import Profile from '../Page/Profile';
+// import Layout1 from '../Layout/Layout1';
 export const routes = [
     {
         path: "/",
         element: <LayoutDefault />,
+        // element: <Layout1 />,
         children: [
             {
                 path: "/",

@@ -1,0 +1,36 @@
+<svg class="hero-image" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background -->
+          <rect width="500" height="400" fill="url(#heroGradient)" rx="20" />
+
+          <!-- Gradient Definition -->
+          <defs>
+            <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#667eea" />
+              <stop offset="100%" style="stop-color:#764ba2" />
+            </linearGradient>
+            <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#ffffff" />
+              <stop offset="100%" style="stop-color:#f8fafc" />
+            </linearGradient>
+          </defs>
+
+          <!-- Quiz Cards -->
+          <rect x="50" y="50" width="180" height="120" fill="url(#cardGradient)" rx="15" opacity="0.9" />
+          <rect x="270" y="80" width="180" height="120" fill="url(#cardGradient)" rx="15" opacity="0.9" />
+          <rect x="160" y="230" width="180" height="120" fill="url(#cardGradient)" rx="15" opacity="0.9" />
+
+          <!-- Icons -->
+          <circle cx="140" cy="110" r="20" fill="#667eea" />
+          <text x="140" y="118" text-anchor="middle" fill="white" font-size="16">💻</text>
+
+          <circle cx="360" cy="140" r="20" fill="#10b981" />
+          <text x="360" y="148" text-anchor="middle" fill="white" font-size="16">🧮</text>
+
+          <circle cx="250" cy="290" r="20" fill="#f59e0b" />
+          <text x="250" y="298" text-anchor="middle" fill="white" font-size="16">🎯</text>
+
+          <!-- Floating Elements -->
+          <circle cx="400" cy="60" r="8" fill="rgba(255,255,255,0.3)" />
+          <circle cx="80" cy="300" r="6" fill="rgba(255,255,255,0.3)" />
+          <circle cx="450" cy="350" r="10" fill="rgba(255,255,255,0.3)" />
+        </svg>

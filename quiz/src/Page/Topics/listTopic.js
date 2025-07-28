@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import Modal from 'react-modal'
 import { getTopic } from "../../Services/Topics";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Topic.scss"
 
 
 Modal.setAppElement("#root");
 
 function ListTopic() {
-
     const [showModal, setShowModal] = useState(false);
     const [topics, setTopics] = useState([]);
     const [item, setItem] = useState(null);
@@ -23,6 +22,14 @@ function ListTopic() {
             padding: '20px',
         },
     };
+
+    const imageMap = {
+        HTML: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+        CSS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+        JS: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+        React: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    };
+
 
     const openModal = (item) => {
         setItem(item);
@@ -70,18 +77,38 @@ function ListTopic() {
                     <button onClick={() => handleClick(item)} className="modal__ok">Làm</button>
                 </div>
             </Modal>
-            <div className="topic__list">
-                {topics.length === 0 ? (
-                    <p>Đang tải dữ liệu</p>
-                ) : (
-                    topics.map(item => (
-                        <div className="topic__item" key={item.id}>
-                            <Link onClick={() => openModal(item)}>{item.name}</Link>
-                        </div>
-                    ))
-                )}
 
-            </div>
+            <section class="categories" id="categories" style={{ padding: '20px 0', background: 'white' }}>
+                <div class="categories-container">
+                    <div class="section-header animate-on-scroll">
+                        <h2 class="section-title">Khám phá các chủ đề</h2>
+                        <p class="section-subtitle">Từ công nghệ thông tin đến kinh doanh, chúng tôi có đầy đủ các chủ đề để bạn lựa
+                            chọn.</p>
+                    </div>
+                    <div class="categories-grid">
+                        {topics.length === 0 ? (
+                            <p>Đang tải dữ liệu</p>
+                        ) : (
+                            topics.map(item => (
+                                <div class="category-card animate-on-scroll" key={item.id} onClick={() => openModal(item)}>
+                                    <div class="category-icon">
+                                        <img
+                                            src={imageMap[item.name]}
+                                            alt={item.name}
+                                            width="40"
+                                        />
+                                    </div>
+                                    <h3 class="category-title">
+                                        {item.name}
+                                    </h3>
+                                    <p class="category-count">10+ câu hỏi</p>
+                                    <p class="category-description">Các câu hỏi liên quan tới {item.name}</p>
+                                </div>
+                            ))
+                        )}
+                    </div>
+                </div>
+            </section>
         </>
     )
 }

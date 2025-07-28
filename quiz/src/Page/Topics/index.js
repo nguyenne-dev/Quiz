@@ -3,10 +3,11 @@ import ListTopic from "./listTopic";
 
 function Topics() {
     return (
-        <>
-            <h2 className="topic__title">Câu hỏi chủ đề</h2>
+        <div className="container">
+            <hr />
+            {/* <h2 className="topic__title">Câu hỏi chủ đề</h2> */}
             <ListTopic />
-        </>
+        </div>
     )
 }
 

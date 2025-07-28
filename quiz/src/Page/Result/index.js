@@ -38,7 +38,7 @@ function Result() {
   }, [id]);
 
   return (
-    <>
+    <div className="container">
       <h2>Điểm: {score}</h2>
       <h2>Đáp án</h2>
       {questions.map((q, index) => {
@@ -51,6 +51,7 @@ function Result() {
                 <li
                   key={i}
                   style={{
+                    marginLeft:'55px', marginBottom:'15px',
                     color:
                       i === q.correctAnswer
                         ? "green"
@@ -70,7 +71,7 @@ function Result() {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }
 

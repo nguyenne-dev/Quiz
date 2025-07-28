@@ -41,34 +41,10 @@ function History() {
     fetchApi();
   }, []);
 
-
-  // return (
-  //   <>
-  //     <h2>Lịch sử làm bài</h2>
-  //     <div className="history">
-  //       {userAnswers?.map(item => (
-  //         <div className="history__item" key={item.id}>
-  //           <div className="history__topic">Chủ đề: {item.topicName}</div>
-  //           <div className="history__score">Điểm: {item.score}/{item.answers.length}</div>
-  //           <div className="history__time">Thời gian làm: {item.time}</div>
-  //           {/* <Link to={`/result?id=${item.id}`} className="history__btn_xem">Xem</Link> */}
-  //           <Link
-  //             to={`/result?id=${item.id}`}
-  //             state={{score: item.score }}
-  //             className="history__btn_xem"
-  //           >
-  //             Xem
-  //           </Link>
-
-  //         </div>
-  //       ))}
-  //     </div>
-  //   </>
-  // )
-
   return (
-    <>
-      <h2>Lịch sử làm bài</h2>
+    <div className="container">
+      <hr />
+      <h2 style={{ marginBottom: '50px', marginTop: '50px' }}>Lịch sử làm bài</h2>
       <div className="history">
         {userAnswers === null ? (
           <p>Đang tải dữ liệu...</p>
@@ -91,7 +67,7 @@ function History() {
           ))
         )}
       </div>
-    </>
+    </div>
   );
 
 }
